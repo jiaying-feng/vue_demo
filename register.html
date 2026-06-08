@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    冯佳盈+246230330+24软件三班
+    <h1>注册页面</h1>
+    <hr>
+    <!-- 
+        action="/register" 提交的目标地址
+        method="POST" 请求方法POST,客户端把表单中的数据提交到后端服务器，后端服务器解析后存入数据库
+        enctype="application/x-www-form-urlencoded"  数据编码格式，用于提交表单数据
+        客户端发送的请求格式为x-www-form-urlencoded
+        urlencoded 表单的格式
+        浏览器会把当前表单信息拼接：username=张三&email=163xxx@qq.com, 这样就可以通过请求体req.body拿到数据
+    -->
+    <form action="/register" method="POST" enctype="application/x-www-form-urlencoded">
+        <p>
+            用户名：<input type="text" name="username" placeholder="请输入用户名...">
+        </p>
+        <p>
+            邮箱：<input type="text" name="email" placeholder="请输入邮箱...">
+        </p>
+        <p>
+            密码：<input type="password" name="password" placeholder="请输入密码...">
+        </p>
+        <p>
+            确认密码：<input type="password" name="repwd">
+        </p>
+        <p>
+            <input type="submit" value="注册提交">
+        </p>
+    </form>
+</body>
+</html>
